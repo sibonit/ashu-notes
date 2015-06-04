@@ -1,0 +1,18 @@
+SIB site features
+==============
+Home page: As of 28-Apr-2015
+--------------------------------------------------
+1. Super menu bar - full page width
+
+2. News slider below the supermenu, loading news from database
+
+3. Calendar events, from DB, showing in 4 column panel format
+
+4. SIB logo show and lock on nab bar on scroll down and hide on scroll up
+
+5. Lock Nav bar on top of page upon scroll down
+
+6. First item (<li> element) in the menu bar has left padding on page load. This needs to be removed when the SIB logo appears on the menu bar. Also, it needs to be added back when the logo dissapears from the menu bar. This is handled using Jquery in navrbar.js file
+
+
+

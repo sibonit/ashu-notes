@@ -1,0 +1,34 @@
+MYSQL:
+
+Rails(SIB): 
+MYSQL: SIB
+>mysql -u root -p sib_production
+Pass: Pine4pple!
+
+DEV.SIB
+========
+ username: sib
+  password: 35HbdxEtvqvX
+
+
+
+Rails(MCB-Grappelli): 
+user: mcbweb
+>rails db
+Pass: b0ttl3
+
+============================
+>SHOW databases;
+>use database_name;
+>describe table_name;
+=============
+IRB console:
+
+>ruby script/console p
+
+
+
+
+
+
+
