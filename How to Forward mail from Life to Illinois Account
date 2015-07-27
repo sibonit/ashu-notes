@@ -1,0 +1,24 @@
+1. Go to webmail.illinois.edu and delete any auto forward rule, if they have any.
+2. >ssh to Braxton
+3. >gvim \etc\postfix\left=life-aliases
+4. Add their illinois email address here. For the first time use, put this addess:
+   netid@mx.uillinois.edu
+5. Now ssh to hiromi (commons2)
+6. >sudo bash
+7. Run the following file as root: 
+  > /usr/local/bin/life2uc
+8. Answer the following questions:
+   >NetID
+   >Life ID
+   >Password
+
+9. The below 2 steps needs to be done after a while (maybe a month or so)
+  > cd /root   (on Hiromi)
+  Remove the file that was created for the user here. The file is identified by their netid
+  
+10. > cd/tmp
+    Remove the file that was created for the user here. The file is identified by their netid
+    
+
+If you want to take a look at the mail templates, they are here:
+/usr/local/bin
