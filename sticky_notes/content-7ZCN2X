@@ -1,0 +1,21 @@
+boldAccess to commons2 folder/bold
+=========================
+2 things needed to give access:
+
+1. Life ID
+2. Folder name on commons2 to which they need access
+-----------------------
+
+On Braxton: Create Life ID:
+======================
+> ssh ashwini@braxton
+> sudo bash
+> lsuser netid			--check if user exits
+> add_user netid
+-- Enter name
+--Expire pass: no
+--continue: yes
+--password: ask user to enter one.
+
+
+Get the folder name commons to which they need access and let them go. CHeck the document for the rest of the steps.
