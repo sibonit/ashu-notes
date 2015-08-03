@@ -1,0 +1,46 @@
+Get Machine Physical address
+-------------------------------------------------
+Make sure you connect the network cable to the computer before you start...
+
+Windows: 
+Run> cmd> getmac
+or Run>cmd>ipconfig/all
+
+Unix:
+Search Terminal
+Run >ifconfig
+Look for HWaddr
+
+Mac:
+(Ask Mac users to get a thunderbolt connector. We cannot use ours)
+Click on Apple (top left corner)
+System preferences> Network
+Select Ethernet and then click Advanced
+Go to tab: Hardware
+Get the MAC Address.
+======================================
+System version: 
+
+Mac: 
+Apple>About this Mac
+
+Unix: 
+System Settings> Details
+(or)
+$ uname -a
+
+Windows:
+$ msinfo32
+
+==========================
+Go to Braxton:
+	> sudo udns
+
+
+
+
+
+
+
+
+

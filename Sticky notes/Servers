@@ -1,0 +1,57 @@
+SERVERS
+========
+Start the http server:
+----------------------------------
+>python -m SimpleHTTPServer 8000
+====================================
+BRAXTON - Mail Server
+>ssh ashwini@braxton
+================================
+GRAPPELLI - Web Server
+>ssh ashwini@grappelli
+
+Make sure you are in root directory
+> cd ../..
+
+Wordpress:
+> cd usr/local/wordpress
+> cd wordpres/wp-content
+
+Rails: 
+> cd usr/local/rails
+=====================================
+Check users for a group on Grappelli
+------------------------------------------------------------
+>ssh ashwini@grappelli
+> cd ../..
+> gvim /etc/group
+=====================================
+HAGEN - Development Server
+
+>ssh ashwini@hagen.life.illinois.edu
+>cd ../..
+>cd rails/dev.sib
+=====================================
+COMMONS2 - Shared folders
+
+> ssh ashwini@commons2
+> sudo bash
+> cd /commons2
+>cd /mnt/s30/onit/documentation
+> gvim hemipteroid
+
+=====================================
+RETROSPECT
+
+Open a new terminal window. Connect to any of the Retrospect server (Jarman or Pele) using GvncViewer command.
+
+>gvncviewer pele 		(or)
+>gvncviewer jarman
+=====================================
+
+
+
+
+
+
+

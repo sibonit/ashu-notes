@@ -1,0 +1,9 @@
+If a user requests to have a particular email address sent to spam, here's how you do it. 
+In this example below, we will add an email address to spam in Govindjee's email account.
+
+1. >ssh to Braxton
+2. >sudo bash
+3. >cd home/gov     #Govindjee's folder
+4. >gvim .procmailrc
+5. Now edit this file to add or remove the email address.
+

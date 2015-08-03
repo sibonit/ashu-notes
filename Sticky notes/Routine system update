@@ -1,0 +1,10 @@
+Routine System Update
+===================
+>aptitude update && aptitude full-ugrade
+
+&& indicates 'if and only if'. The upgade will only be done if any updates are available.
+
+Install Python package
+==================
+>pip3 install SimpleHTTPServer
+

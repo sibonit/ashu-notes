@@ -1,0 +1,10 @@
+1. Go to Run
+   Connect to Commons2 server: smb://commons2/
+   You can also access Commons2 server by doing ssh to Hiromi server.
+    >ssh admin@hiromi
+    >cd /commons2/onit/iso/
+2. Navigate to this folder: iso > windows > microsoft-office > activate_office_2010.bat
+3. Select the file based on the version of office that is installed on the user's computer
+4. Copy the .bat file onto the user's desktop
+5. Right click and Run as admin.
+

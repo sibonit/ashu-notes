@@ -1,0 +1,27 @@
+Export table from one server and import it in another:
+============================================
+Source: 
+-------------
+Server: Grapppelli 
+database: mcb_production
+user:mcbweb
+table to export: calendar_events
+
+Destination:
+-----------------
+Server: Hagen
+DB: sib_development
+
+root@grappelli: 
+> cd /usr/local/rails/mcb
+> mysqldump -u mcbweb -p mcb_production calendar_events > calendar_events.sql
+> scp calendar_events.sql ashwini@hagen:/usr/local/rails/dev.sib
+
+root@hagen:
+> rails db
+> Password: 35HbdxEtvqvX
+> show databases;
+> use sib_development;
+> source calendar_events.sql
+> show tables
+> select * from calendar_events
