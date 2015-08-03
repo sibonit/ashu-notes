@@ -1,0 +1,9 @@
+XPAD files: /home/ashwini/.config/xpad
+Xpad on Ashwini: /home/ashwini/Documents/ashu-notes-master/sticky_notes
+
+Copy: 
+cp -r /home/ashwini/.config/xpad/* /home/ashwini/Documents/ashu-notes-master/sticky_notes
+git add --all
+git commit -m 'files 8/3/2015'
+git push
+
