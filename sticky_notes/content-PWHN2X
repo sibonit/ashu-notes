@@ -1,0 +1,133 @@
+Unix commands
+=============
+free							: 	free, total, swap memory info in bytes
+history						: 	history of commands and then select the number like this:  !x
+clear							:	Clear screen
+pwd							:	current directory path
+vmstat						: 	RAM Size
+ls -l							: 	list all files and directories with details
+ls -a							: 	list all files along with the ones that start with a dot(period)
+top							:	to view the processor activity
+ps								:	list all current processes running in the system
+getent group group_name	: 	List all the users in a group
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+To paste	:	mouse middle click or ctrl+shift+v
+tab		: 	auto complete
+Ctrl+A		: 	move to start of line
+Ctrl+E		: 	move to end of line
+Ctrl+B		: 	moves to the beginning of the previous or current word
+Ctrl+K		: 	deletes from current position to end of line
+Ctrl+U		: 	deletes from start of line to current cursor position
+Ctrl+Z		:	cancel command
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+mkdir							: 	create new directory
+rm -r file_name				:	delete a directory and its contents
+cp file_A file_B 				:	copy file A to file B
+mv file_A file_B				:	move/rename file A to file B
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+groups						:	see what group a given user is in
+groups user_name			:	see what group a particular user is in
+getent group group_name	: 	see other people who are in a group
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+GREP COMMAND
+===============
+history | grep -i http 					: 	shows history of all commands having the word http in it
+grep -i link *							:	search for work link in the whole directory. -i means case insensitive.
+grep -i "createcollapselink" npop*	:	search for work link in the files that start with npop. -i means case insensitive.
+grep link *.js							: 	search for work 'link' in all .js files
+grep "link" index.html				:	search for word 'link' in file index.html
+grep "link" npop*						:	search for word 'link' in all files that start with 'npop'
+grep -iw "create" *					:	search case insensitive for ONLY the whole word 'create'. w means entire word match.
+grep -r link							:	search for word link in the whole directory and subdirectories. r=recursive
+grep -l link *							:	show only the file names that have the word 'link' in it.
+grep -il link *							:	show only the file names that have the word 'link' in it and case insensitive.
+grep -r mysql2 app/views/		        :      search for word mysql2 in app/views folder
+
+ 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TAR COMMANDS
+==============
+tar -cvf test.tar /home/admin/Documents/test	: 	Create a zip/tar file of a folder called 'test' inside Documents folder
+															c=create new .tar file;	v=verbosely show progess;	f=file name type of archive file
+tar -xvf test.tar										:	Untar a .tar file (x = extract)
+
+
+tar -cvzf test.tgz /home/admin/Documents/test	: 	Create a zip/tar file of a folder called 'test' inside Documents folder
+tar -xvf test.tz										:	Untar a .tz file (x = extract)
+															
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CHMOD command (Change Permissions)
+==================================
+ chmod g+w Spring_2015				: Give write permission to a 'Group' to a folder called Spring_2015
+ appchmod o+w Spring_2015				: Give write permission to 'Others' to a folder called Spring_2015
+
+(you can combine the above two to look like this)
+chmod go+w Spring_2015			: Give write permission to 'Group' & 'Others' to a folder called Spring_2015
+chmod ugo+rw Spring_2015			: Give Read/Write access to 'User', Group' and 'Others'.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CHOWN command (Change ownership)
+================================
+sudo chown -R bethany /DATA/SHARE	: Change ownership on the /Data/Share folder to Bethany and -R says, do it to all files and subfolders inside.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FIND Command
+==============
+find . -iname *pop*		:	Looks for all files 
+find /rails/sib -iname 'animalBio1.jpg'
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Copy file from Local machine to Server
+===================================
+
+scp /home/admin/Pictures/YHali.jpg ashwini@hagen:/usr/local/rails/ashwini/app/assets/images
+scp /home/Downloads/cssmenu/images/icon_plus.png ashwini@hagen:/usr/local/rails/ashwini/app/assets/images
+scp /home/Downloads/cssmenu/images/icon_minus.png ashwini@hagen:/usr/local/rails/ashwini/app/assets/images
+scp Downloads/confectionary.png ashwini@hagen:/usr/local/rails/ashwini/app/assets/images/header-3.png
+
+scp calendar_events.sql ashwini@hagen:/usr/local/rails/dev.sib
+
+scp Pictures/students-faded-little.png ashwini@hagen:/usr/local/rails/dev.sib/app/assets/images/students-faded.png
+gscp Pictures/madeline_piller.jpg ashwini@hagen:/usr/local/rails/dev.sib/app/assets/images/sib/madelie_piller.jpg
+scp public/images ashwini@hagen:/usr/local/rails/dev.sib/app/assets/images/public
+
+scp -r ashwini@hagen:/usr/local/rails/ashwini/app/views/* Downloads/ashwini/views
+scp -r ashwini@hagen:/usr/local/rails/ashwini/app/controllers/* Downloads/ashwini/controllers
+scp -r ashwini@hagen:/usr/local/rails/ashwini/app/assets/stylesheets/* Downloads/ashwini/stylesheets
+scp -r ashwini@hagen:/usr/local/rails/ashwini/app/assets/javascripts/* Downloads/ashwini/javascripts
+
+scp -r ashwini@hagen:/usr/local/rails/dev.sib/app/assets/images* Pictures/SIB
+============================
+cp -r app/controllers/* /rails/ashwini/app/controllers/
+cp -r app/views/* /rails/ashwini/app/views/
+cp -r app/assets/stylesheets/* /rails/ashwini/app/assets/stylesheets/
+cp -r config/routes.rb /rails/ashwini/config/routes.rb 
+cp -r app/assets/javascripts/* /rails/ashwini/app/assets/javascripts/
+cp -r app/models/* /rails/ashwini/app/models/
+
+
+cp -r app/controllers/about_controller /rails/dev.sib/app/controllers/
+
+cp -r app/views/ugrad /rails/dev.sib/app/views/
+cp -r app/views/graduate /rails/dev.sib/app/views/
+cp -r app/views/news /rails/dev.sib/app/views/
+cp -r app/views/people /rails/dev.sib/app/people/
+
+cp -r app/assets/stylesheets/* /rails/dev.sib/app/assets/stylesheets/
+cp -r config/routes.rb /rails/dev.sib/config/routes.rb 
+cp -r app/assets/javascripts/* /rails/dev.sib/app/assets/javascripts/
+cp -r app/models/* /rails/dev.sib/app/models/
+
+rm -rf .git/refs/original/
+ git filter-branch --tree-filter 'rm -rf app/assets/images/public/' HEAD
+ git filter-branch --tree-filter 'rm -rf app/assets/images/public/Greenhouse_Slideshow/' HEAD
+ rm -rf .git/refs/original/
+ git filter-branch --tree-filter 'rm -rf app/assets/images/public/Greenhouse_Slideshow/' HEAD
+ rm -rf .git/refs/original/
+ git filter-branch --tree-filter 'rm -rf app/assets/images/public/ib_honors/' HEAD
+ rm -rf .git/refs/original/
+ git filter-branch --tree-filter 'rm -rf app/assets/images/sib/ib_honors/' HEAD
+ rm -rf .git/refs/original/
+
+
+

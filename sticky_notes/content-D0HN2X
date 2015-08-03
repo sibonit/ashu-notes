@@ -1,0 +1,4 @@
+Restart RAILS server
+===================
+> sudo bash
+> apache2ctl restart

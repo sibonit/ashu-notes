@@ -1,0 +1,7 @@
+MCB Course page update
+====================
+on Grapelli
+cd usr/local/rails/mcb
+./import_course_xml.rb
+Touch /rails/mcb/tmp/restart.txt
+
