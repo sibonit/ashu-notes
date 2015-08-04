@@ -13,6 +13,7 @@ DEV.SIB
 
 
 Rails(MCB-Grappelli): 
+mysql -u mcbweb -p mcb_production
 user: mcbweb
 >rails db
 Pass: b0ttl3

@@ -1,0 +1,4 @@
+Run Firefox
+==========
+> cd /usr/local/firefox
+> ./firefox

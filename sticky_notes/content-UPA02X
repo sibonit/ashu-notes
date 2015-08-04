@@ -1,0 +1,13 @@
+boldJava window not opening from the browser/bold:
+
+This happens due to security reasons. 
+You can fix this by going to the Java control Panel (Control Panel> Search> Java control panel)
+You may not see the Java control panel, if Java is not installed on your computer. 
+Install Java: https://java.com/en/download/
+Once Java is installed, you should see the Java Control panel  (Control Panel> Search> Java control panel)
+Open Java Control Panel
+Go to Advanced tab
+Scroll down to see 'Advanced Security Settings'
+Here, UNCHECK these 2 options
+	-Use TLS 1.1
+	-Use TLS 1.2

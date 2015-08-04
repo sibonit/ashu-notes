@@ -1,0 +1,27 @@
+boldPaths:
+======/bold
+commons2: 
+	smb://commons2
+	>ssh ashwini@commons2
+        \\commons2\onit\iso\windows
+
+
+boldWebsite locations:
+================/bold
+Look for life.illinois websites here on Grappelli: boldraid/usr/local/web/www.life/html//bold
+
+
+boldPlant biology: /boldhttp://www.life.illinois.edu/plantbio/index.html
+	root@grappelli:/# ls -l /raid/usr/local/web/www.life/html/plantbio/
+
+boldEntmology: /boldhttp://www.life.illinois.edu/entomology/index.html
+	root@grappelli:/# ls -l /raid/usr/local/web/www.life/html/entomology/
+
+boldAnimal Biology: /boldhttp://www.life.illinois.edu/animalbiology/
+	root@grappelli:/# ls -l /raid/usr/local/web/www.life/html/animalbiology/
+
+boldNeuroscience/bold: http://neuroscience.illinois.edu/
+	root@grappelli:/# ls -l /rails/neuroscience/
+
+boldMCB/bold: https://mcb.illinois.edu/
+	root@grappelli:/# ls -l /rails/mcb/
