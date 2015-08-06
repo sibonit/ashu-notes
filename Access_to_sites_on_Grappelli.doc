@@ -1,0 +1,39 @@
+﻿Scenario:
+
+Any site that has a URL starting with life.illinois.edu is on Grappelli.
+
+Problem: 
+
+User NOT able to download pdfs from this page.
+http://www.life.illinois.edu/ib/452/readings.html
+
+
+Solution:
+
+User needs special access rights to be able to download files. Once the access is given, they can login with their AD login and password.
+
+To add user to access group:
+
+	> ssh ashwini@grappelli
+	> sudo bash
+	> gvim /etc/apache2/sites-enabled/www.life
+
+Here's the section of codes in the file, that needs to be changed. The place where it is highlighted is where you need to add the netid of the person who needs access.
+
+  <Location /ib/452/private>
+    AuthName "Use campus AD login"
+    # Individuals
+    require ldap-user fhu dconybe2 melton1 laborg leakey 
+    # AD course group
+    require ldap-group cn=IB 452 Current,ou=courses,ou=class rosters,ou=register,ou=urbana,dc=ad,dc=uillinois,dc=edu
+    require ldap-group cn=NRES 462 Current,ou=courses,ou=class rosters,ou=register,ou=urbana,dc=ad,dc=uillinois,dc=edu
+    # ONIT
+    require ldap-group cn=life-admins,ou=groups,ou=life,ou=las,ou=urbana,dc=ad,dc=uillinois,dc=edu
+  </Location>
+
+
+
+Save the document and restart Apache when done using the code below:
+
+	> apache2ctl graceful
+
