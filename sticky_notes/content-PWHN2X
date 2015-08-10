@@ -43,7 +43,11 @@ grep -r link							:	search for word link in the whole directory and subdirector
 grep -l link *							:	show only the file names that have the word 'link' in it.
 grep -il link *							:	show only the file names that have the word 'link' in it and case insensitive.
 grep -r mysql2 app/views/		        :      search for word mysql2 in app/views folder
+---------------------------------------------------------
+Image resize:
+============
 
+convert example.png -resize 200×100 example.png
  
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 TAR COMMANDS
@@ -75,14 +79,15 @@ FIND Command
 find . -iname *pop*		:	Looks for all files 
 find /rails/sib -iname 'animalBio1.jpg'
 
+Find all the files in a directory containing a string:
+========================================
+root@grappelli:/rails/biophysics#  grep -ri -l "Center for Biophysics and Computational Biology" app/views/
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Copy file from Local machine to Server
 ===================================
 
 scp /home/admin/Pictures/YHali.jpg ashwini@hagen:/usr/local/rails/ashwini/app/assets/images
-scp /home/Downloads/cssmenu/images/icon_plus.png ashwini@hagen:/usr/local/rails/ashwini/app/assets/images
-scp /home/Downloads/cssmenu/images/icon_minus.png ashwini@hagen:/usr/local/rails/ashwini/app/assets/images
 scp Downloads/confectionary.png ashwini@hagen:/usr/local/rails/ashwini/app/assets/images/header-3.png
 
 scp calendar_events.sql ashwini@hagen:/usr/local/rails/dev.sib
@@ -93,41 +98,13 @@ scp public/images ashwini@hagen:/usr/local/rails/dev.sib/app/assets/images/publi
 
 scp -r ashwini@hagen:/usr/local/rails/ashwini/app/views/* Downloads/ashwini/views
 scp -r ashwini@hagen:/usr/local/rails/ashwini/app/controllers/* Downloads/ashwini/controllers
-scp -r ashwini@hagen:/usr/local/rails/ashwini/app/assets/stylesheets/* Downloads/ashwini/stylesheets
-scp -r ashwini@hagen:/usr/local/rails/ashwini/app/assets/javascripts/* Downloads/ashwini/javascripts
 
 scp -r ashwini@hagen:/usr/local/rails/dev.sib/app/assets/images* Pictures/SIB
 ============================
 cp -r app/controllers/* /rails/ashwini/app/controllers/
-cp -r app/views/* /rails/ashwini/app/views/
-cp -r app/assets/stylesheets/* /rails/ashwini/app/assets/stylesheets/
-cp -r config/routes.rb /rails/ashwini/config/routes.rb 
-cp -r app/assets/javascripts/* /rails/ashwini/app/assets/javascripts/
-cp -r app/models/* /rails/ashwini/app/models/
-
-
 cp -r app/controllers/about_controller /rails/dev.sib/app/controllers/
-
 cp -r app/views/ugrad /rails/dev.sib/app/views/
-cp -r app/views/graduate /rails/dev.sib/app/views/
-cp -r app/views/news /rails/dev.sib/app/views/
-cp -r app/views/people /rails/dev.sib/app/people/
 
-cp -r app/assets/stylesheets/* /rails/dev.sib/app/assets/stylesheets/
-cp -r config/routes.rb /rails/dev.sib/config/routes.rb 
-cp -r app/assets/javascripts/* /rails/dev.sib/app/assets/javascripts/
-cp -r app/models/* /rails/dev.sib/app/models/
-
-rm -rf .git/refs/original/
- git filter-branch --tree-filter 'rm -rf app/assets/images/public/' HEAD
- git filter-branch --tree-filter 'rm -rf app/assets/images/public/Greenhouse_Slideshow/' HEAD
- rm -rf .git/refs/original/
- git filter-branch --tree-filter 'rm -rf app/assets/images/public/Greenhouse_Slideshow/' HEAD
- rm -rf .git/refs/original/
- git filter-branch --tree-filter 'rm -rf app/assets/images/public/ib_honors/' HEAD
- rm -rf .git/refs/original/
- git filter-branch --tree-filter 'rm -rf app/assets/images/sib/ib_honors/' HEAD
- rm -rf .git/refs/original/
 
 
 

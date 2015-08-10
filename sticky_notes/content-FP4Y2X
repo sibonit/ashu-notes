@@ -1,4 +1,7 @@
-Run Firefox
-==========
-> cd /usr/local/firefox
-> ./firefox
+Run Firefox and THunderbird
+========================
+cd /usr/local/firefox
+./firefox
+
+
+sudo thunderbird

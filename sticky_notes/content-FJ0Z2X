@@ -8,7 +8,9 @@ commons2:
 
 boldWebsite locations:
 ================/bold
-Look for life.illinois websites here on Grappelli: boldraid/usr/local/web/www.life/html//bold
+Look for life.illinois websites here on Grappelli: 
+
+boldcd /raid/usr/local/web/www.life/html//bold
 
 
 boldPlant biology: /boldhttp://www.life.illinois.edu/plantbio/index.html
