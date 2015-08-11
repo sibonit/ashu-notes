@@ -1,6 +1,7 @@
 XPAD files: /home/ashwini/.config/xpad
 Xpad on Ashwini: /home/ashwini/Documents/ashu-notes-master/sticky_notes
 
+>cd Documents/ashu-notes-master/
 underlineboldCopy: /bold/underline
 cp -r /home/ashwini/.config/xpad/* /home/ashwini/Documents/ashu-notes-master/sticky_notes
 git add --all

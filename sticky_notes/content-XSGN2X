@@ -1,6 +1,27 @@
-MCB Course page update and restart to reflect changes
-===============================================
-on Grapelli
-cd usr/local/rails/mcb
+MCB Courses Update
+===================
+on Grapelli:
+
+The course import XML file is here: 
+
+Go to:
+---------
+> cd /rails/mcb/local/bin/
+> gvim import_course_xml.rb
+
+
+Make sure the current semester is configured correctly before you execute the file. If not, it clears out all the current data.
+
+Run the file:
+---------------------
 ./import_course_xml.rb
+
+Restart:
+--------------
 Touch /rails/mcb/tmp/restart.txt
+
+
+
+Scenario:
+
+The instructor's name on Illinois course explorer is different than the one on MCB site. The instructor want it to be like the one in Course Explorer. By the running the XML, the course information in our database will be updated and will be in sync with the course explorer.
