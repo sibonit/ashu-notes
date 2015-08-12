@@ -1,12 +1,12 @@
-width 621
-height 365
-x 1032
-y 518
+width 827
+height 789
+x 171
+y 175
 follow_font 1
 follow_color 1
 sticky 0
-hidden 0
+hidden 1
 back rgb(255,238,153)
 text rgb(0,0,0)
 fontname Ubuntu 11
-content content-D0HN2X
+content content-01F42X

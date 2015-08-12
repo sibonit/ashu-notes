@@ -2,3 +2,7 @@ Restart RAILS server
 ===================
 > sudo bash
 > apache2ctl restart
+
+Restart RAILS Application
+=====================
+> touch tmp/restart.txt 

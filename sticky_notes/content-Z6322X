@@ -1,0 +1,1 @@
+INSERT INTO news_items (id, headline, summary) VALUES (5, 'Long-term nitrogen fertilizer use disrupts plant-microbe mutualisms', 'University of Illinois plant biology professor Katy Heath and her colleagues found that long-term nitrogen fertilizer use disrupts the mutually beneficial relationship between legumes and soil microbes.');

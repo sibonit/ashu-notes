@@ -1,0 +1,25 @@
+MYSQL Commands:
+================
+
+Create a copy of a table:
+------------------------------------------
+	CREATE TABLE news_items_mcb LIKE news_items;
+
+Copy contents from old table to new table:
+-----------------------------------------------------------------------
+	INSERT INTO news_items_mcb SELECT * FROM news_items;
+
+Rename column in a table:
+------------------------------------------
+	ALTER TABLE table_name CHANGE old_column_name new_column_name varchar(255);
+
+Drop Column in a table:
+--------------------------------------
+	ALTER TABLE news_items DROP COLUMN image_cdb_updated_at, DROP COLUMN image_cdb_caption;
+
+
+
+
+
+
+

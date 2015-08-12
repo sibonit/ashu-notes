@@ -46,8 +46,7 @@ grep -r mysql2 app/views/		        :      search for word mysql2 in app/views fo
 ---------------------------------------------------------
 Image resize:
 ============
-
-convert example.png -resize 200×100 example.png
+> convert example.png -resize 200×100 example.png
  
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 TAR COMMANDS
@@ -72,8 +71,22 @@ chmod ugo+rw Spring_2015			: Give Read/Write access to 'User', Group' and 'Other
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 CHOWN command (Change ownership)
 ================================
-sudo chown -R bethany /DATA/SHARE	: Change ownership on the /Data/Share folder to Bethany and -R says, do it to all files and subfolders inside.
+-rw-rw---- 1 ashwini   webdev     24543 Aug 11 09:41 whitebox.jpg
+
+Change the above user from ashwini to admin:
+> chown admin app/assets/images/whitebox.jpg 
+
+Change ownership on the /Data/Share folder to Bethany and -R says, do it to all files and subfolders inside.
+> sudo chown -R bethany /DATA/SHARE
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CHGRP Commons (Change Group)
+=============================
+-rw-rw---- 1 ashwini   devgrp    24543 Aug 11 09:41 whitebox.jpg
+
+Change group from devgrp to webdev:
+>chgrp webdev app/assets/images/whitebox.jpg 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 FIND Command
 ==============
 find . -iname *pop*		:	Looks for all files 
@@ -83,6 +96,12 @@ Find all the files in a directory containing a string:
 ========================================
 root@grappelli:/rails/biophysics#  grep -ri -l "Center for Biophysics and Computational Biology" app/views/
 
+Replace string in all files 
+=====================
+From: mailto:plants@life.illinois.edu
+To: /plantbio/contact_us.htm
+
+find . -type f -print0 | xargs -0 sed -i 's/<a href="mailto:plants@life\.illinois\.edu">/<a href="\/plantbio\/contact_us.htm">/g'
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Copy file from Local machine to Server
 ===================================
