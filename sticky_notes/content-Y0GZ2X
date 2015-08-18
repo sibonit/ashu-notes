@@ -17,9 +17,7 @@ Drop Column in a table:
 --------------------------------------
 	ALTER TABLE news_items DROP COLUMN image_cdb_updated_at, DROP COLUMN image_cdb_caption;
 
-
-
-
-
-
+ADD column:
+----------------------
+ALTER TABLE news_items ADD news_highlight tinyint(1) deafult 0;
 

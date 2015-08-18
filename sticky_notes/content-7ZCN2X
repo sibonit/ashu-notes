@@ -6,6 +6,10 @@
 2. Folder name on commons2 to which they need access
 -----------------------
 
+ cd /commons2
+
+
+
 On Braxton: Create Life ID:
 ======================
 > ssh ashwini@braxton
