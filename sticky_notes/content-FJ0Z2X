@@ -28,5 +28,7 @@ Look for life.illinois websites here on Grappelli:
 boldMCB/bold: https://mcb.illinois.edu/
 	root@grappelli:/# ls -l /rails/mcb/
 
-
+boldOLD SIB:/bold https://SIB.illinois.edu/
+	root@grappelli:/# ls -l /rails/sib/
+	app/views/static/Content/sib/courses/
 
