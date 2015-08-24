@@ -5,11 +5,6 @@
 1. Life ID
 2. Folder name on commons2 to which they need access
 -----------------------
-
- cd /commons2
-
-
-
 On Braxton: Create Life ID:
 ======================
 > ssh ashwini@braxton
@@ -21,5 +16,26 @@ On Braxton: Create Life ID:
 --continue: yes
 --password: ask user to enter one.
 
+=======================================
+On Hiromi:
+=========
+>ssh ashwini@hiromi
+> cd /commons2
 
-Get the folder name commons to which they need access and let them go. CHeck the document for the rest of the steps.
+-- Note the group name for the folder user needs access to.
+-- To see the users in this group:
+	> getent group group_name
+========================================
+On phpLDAPAdmin
+================
+https://www-s.life.illinois.edu/phpldapadmin/htdocs/index.php
+Login pass: kallagadi
+On the left expand "dc=life,dc=uiuc,dc=edu (6)"
+Select the group you need
+Add the user and save
+==========================================
+
+Group file on hiromi:
+==================
+cd /etc/group
+
