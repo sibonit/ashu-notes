@@ -36,4 +36,17 @@ root@grappelli: cd /rails/sib/app/views/static/Content/Peec/
 boldDocs/bold: cd /rails/sib/public/peec
 
 
+boldGroup permission settings on Grappelli:
+====================================/bold
+> gvim /etc/apache2/sites-enabled/www.life
+>gvim /etc/group
+
+boldRestart RAILS server
+===================/bold
+> sudo bash
+> apache2ctl restart
+bold
+Restart RAILS Application
+=========================/bold
+> touch tmp/restart.txt 
 

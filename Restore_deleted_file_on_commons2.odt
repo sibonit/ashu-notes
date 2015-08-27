@@ -1,0 +1,38 @@
+﻿RESTORE DELETED FILE ON COMMONS2 FROM THE BACKUP SERVER
+=======================================================
+
+Problem: Person deleted a file on the folder in commons2, by accident. Need to get it restored.
+
+File in Question:
+	commons2(hiromi) → kehlfie_lab → paola → ArlRs Practice extension xpt
+
+Facts:
+
+-Commons2 server is backed to another server called Aebi(pronounced A-B), 3 times a week (Sunday, Wednesday, Friday – mornings)
+- There are several partitions on the commons2 server and different user folders are in different partitions.
+
+
+Method:
+
+- First look up the partition in which the folder resides:
+
+	root@hiromi:# ls -l /commons2/kehlfie_lab
+	lrwxrwxrwx 1 root root 20 Jul 30  2014 /commons2/kehlfie_lab -> /mnt/s20/kehlfie_lab
+
+- ssh with admin to aebi
+	> ssh admin@aebi
+	> sudo bash
+	> cd /mnt/s20/
+	> ls -l
+
+- You will see several back-ups to the kehlfie lab here, with dates next to it. 
+- Since you know the file name that was deleted, you can grep for the file and try to find where it is. Once you find it, you can scp it back to commons2.
+
+
+
+	
+
+
+
+
+
