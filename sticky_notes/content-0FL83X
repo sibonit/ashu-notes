@@ -1,0 +1,3 @@
+RUBY RAILS Commands:
+
+keep html in string ---> string.html_safe

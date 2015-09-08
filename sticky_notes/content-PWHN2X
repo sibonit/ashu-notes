@@ -4,12 +4,14 @@ free							: 	free, total, swap memory info in bytes
 history						: 	history of commands and then select the number like this:  !x
 clear							:	Clear screen
 pwd							:	current directory path
-vmstat						: 	RAM Size
+vmstat						: 	RAM Size=
 ls -l							: 	list all files and directories with details
 ls -a							: 	list all files along with the ones that start with a dot(period)
 top							:	to view the processor activity
 ps								:	list all current processes running in the system
 getent group group_name	: 	List all the users in a group
+
+Link one file to another								: ln -s registration_oepn.html.erb open.html.erb 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 To paste	:	mouse middle click or ctrl+shift+v
 tab		: 	auto complete

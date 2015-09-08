@@ -5,7 +5,7 @@ y 184
 follow_font 1
 follow_color 1
 sticky 0
-hidden 0
+hidden 1
 back rgb(255,238,153)
 text rgb(0,0,0)
 fontname Ubuntu 11

@@ -9,6 +9,10 @@ On Grappelli:
 
 	Go the section for the course that needs change in permissions or needs a new user to be added. Make the changes (add/delete user/group)
 
+If not here see in :
+> gvim /etc/group
+
+
 Restart apache:
 > apache2ctl graceful
 
@@ -16,6 +20,7 @@ Restart apache:
 Scenario:
 Why can't I download the pdfs on this course page? 
 http://www.life.illinois.edu/ib/452/readings.html
+http://www.life.illinois.edu/mcb/426/
 
 Ans: It's because they have no permission to download. It needs to be added.
 

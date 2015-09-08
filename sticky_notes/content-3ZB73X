@@ -1,0 +1,10 @@
+Upload profile proto to SIB site
+=========================
+
+> ssh to yorke
+> sudo bash
+> cd /rails/sib
+> rails c p
+> p = Person.find_by_netid('NetID')
+>p.Photo=FIle.open('/rails/sib/public/images/profile_photos/image.png')
+>p.save

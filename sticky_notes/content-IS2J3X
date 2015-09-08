@@ -1,0 +1,6 @@
+User access to servers:
+====================
+Server: neuroscience/infocenter
+To add a user: User needs to be added to the User table in the database.
+				This can be done directly in the database or from the web console: https://neuroscience.illinois.edu/login
+				If you are already a user that exists in the User table, you would have to login with your Netid and Password here to add someone.

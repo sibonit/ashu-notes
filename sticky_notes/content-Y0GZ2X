@@ -21,3 +21,8 @@ ADD column:
 ----------------------
 ALTER TABLE news_items ADD news_highlight tinyint(1) deafult 0;
 
+ALTER TABLE  calendar_events ADD speakerName varchar(255);
+ALTER TABLE  calendar_events ADD speakerInstitute varchar(255);
+ALTER TABLE  calendar_events ADD titleShort varchar(255);
+
+
