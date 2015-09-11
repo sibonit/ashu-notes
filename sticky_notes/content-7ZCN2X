@@ -39,3 +39,6 @@ Group file on hiromi:
 ==================
 cd /etc/group
 
+
+
+>add_host lifeID server_name

@@ -19,10 +19,21 @@ Drop Column in a table:
 
 ADD column:
 ----------------------
-ALTER TABLE news_items ADD news_highlight tinyint(1) deafult 0;
+ALTER TABLE news_items ADD highlight tinyint(1) default 0;
+ALTER TABLE news_items ADD active tinyint(1) default 0;
 
 ALTER TABLE  calendar_events ADD speakerName varchar(255);
 ALTER TABLE  calendar_events ADD speakerInstitute varchar(255);
 ALTER TABLE  calendar_events ADD titleShort varchar(255);
 
 
+CREATE database and grant access to group
+--------------------------------------------------------------------------
+root@yorke:/usr/local/wordpress/local/blog.sib# mysql -u root -p
+Enter password: Pi....le
+
+mysql> create database wp_blog_sib;
+mysql> grant all on wp_blog_sib.* to wp_blog_sib@localhost identified by "Co1WSVfkgH";
+
+
+update news_items set active = 1;

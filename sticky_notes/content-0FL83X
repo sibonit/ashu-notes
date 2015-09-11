@@ -1,3 +1,18 @@
-RUBY RAILS Commands:
-
+boldunderlineRUBY RAILS Commands:
+/underline/bold
 keep html in string ---> string.html_safe
+
+Check if field value present:
+---------------------------------------------
+<% if (person.profile_blurb).present? %>
+      <%= person.profile_blurb %><br>
+<% end %>		
+
+Join table call:
+-----------------------
+@person.departments.collect{|o| o.name}
+
+=================
+
+Department.select(:name).where(["id = ?", @person.primary_department])
+Location.find(:id => id, :select => "name, website, city", :limit => 1) 

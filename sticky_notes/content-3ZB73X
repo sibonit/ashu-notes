@@ -1,6 +1,16 @@
-Upload profile proto to SIB site
-=========================
+SIB SIte maintenance
+===================
 
+RAILS Rebuild Assets
+------------------------------------
+
+> RAILS_ENV=production bin/rake assets:precompile
+
+http://guides.rubyonrails.org/asset_pipeline.html 
+
+
+Upload profile proto to SIB site
+----------------------------------------------------
 > ssh to yorke
 > sudo bash
 > cd /rails/sib
@@ -8,3 +18,32 @@ Upload profile proto to SIB site
 > p = Person.find_by_netid('NetID')
 >p.Photo=FIle.open('/rails/sib/public/images/profile_photos/image.png')
 >p.save
+
+SYnc Prod to DEV
+==============
+--Calendar sync
+	>ssh to hagen, sudo bash
+	> cd /rails/dev.sib/local/bin
+	> ./sync_calendar_events.rb
+
+
+at Yorke:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
