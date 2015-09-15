@@ -11,7 +11,7 @@ top							:	to view the processor activity
 ps								:	list all current processes running in the system
 getent group group_name	: 	List all the users in a group
 
-Link one file to another								: ln -s registration_oepn.html.erb open.html.erb 
+Link one file to another		: ln -s registration_open.html.erb open.html.erb 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 To paste	:	mouse middle click or ctrl+shift+v
 tab		: 	auto complete

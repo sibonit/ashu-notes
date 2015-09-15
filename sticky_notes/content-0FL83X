@@ -10,9 +10,11 @@ Check if field value present:
 
 Join table call:
 -----------------------
-@person.departments.collect{|o| o.name}
 
-=================
+Join people, departments_people and departments tables and get the department
+name for each person in an array and then display it with comma separated:
 
-Department.select(:name).where(["id = ?", @person.primary_department])
-Location.find(:id => id, :select => "name, website, city", :limit => 1) 
+<% @person_dept =  person.departments.collect{|o| o.name} %>
+<%= @person_dept.join(", ") %></p>
+
+==========================================================
