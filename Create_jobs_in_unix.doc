@@ -1,0 +1,32 @@
+﻿CREATE AUTO JOBS IN UNIX
+
+Scenario: For the microbiology Conference site, once we open the registration, we need to close them on a certain date. You can have a auto job set up for this, to make sure you do not forget to do it.
+
+Site: https://mcb.illinois.edu/departments/microbiology/research_conference/
+
+On Grappelli:
+
+> ssh admin@grappelli and sudo bash
+> cd /rails/micro_research_conf
+
+Now create a file that contains all the commands that need to run to have the registration closed:
+
+> gvim local/close_registration.sh 
+
+In this file, enter the following commands and save it:
+
+cd /rails/micro_research_conf/app/views/abstracts
+rm new.html.erb
+ln -s registration_closed.html.erb new.html.erb
+touch /rails/micro_research_conf/tmp/restart.txt
+
+Run the below command to activate the job:
+ > at -f /rails/micro_research_conf/local/close_registration.sh 12:00 AM October 2 2015
+
+The above command, will set the system to run the close_registation.sh file to run on the date/time you provided. When the file executes on the set date, it will do the following:
+	- runs the codes inside the file
+	- remove the symlink for new.html.erb to registration_open.html.erb
+	- create new symlink for new.html.erb to registration_closed.html.erb
+	- Restart server
+
+

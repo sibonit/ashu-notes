@@ -27,7 +27,10 @@ SYnc Prod to DEV
 	> ./sync_calendar_events.rb
 
 
-at Yorke:
+Copy SIb site folder from Production to Local computer:
+===============================================
+> scp -r admin@yorke:/rails/sib/* SIB_site_Sep2015/
+
 
 
 
