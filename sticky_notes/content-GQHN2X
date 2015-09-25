@@ -2,9 +2,9 @@ XPAD files: /home/ashwini/.config/xpad
 Xpad on Ashwini: /home/ashwini/Documents/ashu-notes-master/sticky_notes
 
 >cd Documents/ashu-notes-master/
-underlineboldCopy: /bold/underline
+boldunderlineCopy: /underline/bold
 cp -r /home/ashwini/.config/xpad/* /home/ashwini/Documents/ashu-notes-master/sticky_notes
 git add --all
-git commit -m 'files 09/15/2015'
+git commit -m 'files 09/25/2015'
 git push
 
