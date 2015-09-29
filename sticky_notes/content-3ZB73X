@@ -19,13 +19,23 @@ Upload profile proto to SIB site
 >p.Photo=FIle.open('/rails/sib/public/images/profile_photos/image.png')
 >p.save
 
-SYnc Prod to DEV
-==============
+
 --Calendar sync
 	>ssh to hagen, sudo bash
 	> cd /rails/dev.sib/local/bin
 	> ./sync_calendar_events.rb
 
+The calendar script run 5times/hour to update the list. This is called the crontab. TO see all scripts that are run by crontab, run this:
+root@yorke: /rails/sib# crontab -e
+
+
+SYnc Prod to DEV
+==============
+Rsync Production to Development
+=============================
+On Hagen:
+----------------
+> rsync -av --delete ashwini@sib.illinois.edu/rails/sib/ dev.sib/
 
 Copy SIb site folder from Production to Local computer:
 ===============================================

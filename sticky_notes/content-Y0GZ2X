@@ -12,6 +12,7 @@ Copy contents from old table to new table:
 Rename column in a table:
 ------------------------------------------
 	ALTER TABLE table_name CHANGE old_column_name new_column_name varchar(255);
+	ALTER table news_items ADD original_news_source varchar(255) after active;
 
 Drop Column in a table:
 --------------------------------------

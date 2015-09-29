@@ -1,0 +1,78 @@
+<script src="/videos/ableplayer/thirdparty/modernizr.custom.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="/videos/ableplayer/thirdparty/jquery.cookie.js"></script>
+
+<!-- CSS --> 
+<link rel="stylesheet" href="/videos/ableplayer/styles/ableplayer.css" type="text/css"/>
+
+
+<!--
+<script type="text/javascript">
+
+  function changeVideo( netid ) {
+
+    $( '#video_div' ).height( 360 );
+    
+    //prepare html for video container
+    video_html = "<video \
+      height=\"360\" \
+      id=\"video_container2\" \
+      width=\"480 \" \
+      data-able-player preload="auto" >\
+      <source src=\"/videos/faculty/" + netid + ".webm\" type="video/webm"></source> \
+      <source src=\"/videos/faculty/" + netid + ".mp4\" type="video/mp4"></source> \
+      <track kind="captions" src="\"/videos/faculty/" + netid + ".vtt\"/>
+    </video>";
+
+    // fill video_div with video_html
+    $( '#video_div' ).html( video_html );
+    //html5media();
+//..
+	ableplayer();
+    
+  }
+</script>
+-->
+
+
+<% @page_title = "MCB Faculty Video Interviews" %>
+<% @page_description = "Interviews with faculty of the School of Molecular and Cellular Biology, conducted by MCB honors students. MCB offers a premier undergraduate program, with the best pre-med training at the University of Illinois, as well as four departments offering graduate degrees in the advanced biological sciences." %> 
+<h1>Video Interviews</h1>
+
+<video id="video1" data-able-player preload="auto" width="480" height="400" >
+   <source src="/videos/faculty/jimlay.mp4" type="video/mp4">
+   <source src="/videos/faculty/jimlay.webm" type="video/webm">
+  <track kind="captions" src="/videos/faculty/jimlay.vtt"/>
+</video>
+
+
+
+<!--
+<p id="video_div">
+  <%#= image_tag "faculty_videos_title.jpg", :id => "video", :width => 480 -%>
+</p>
+
+<% # @people.each do |p| -%>
+  <p style="float: left; width: 180px; text-align: center" >
+    <% #img = image_tag '/faculty_research/images/headshots/' + p.picture_name,
+       #   :alt => p.full_name,
+       #   :height => 100, :border => 0,
+       #   :class => "right"
+#
+#       # strip off all URL parts except for the 'src' value
+#       # will wrap in JavaScript function 'wrap_src_in_obj'
+#       src = p.url_video.sub( /\&.*/, '' )
+#       src = src.sub( /^.*src=/, '' )
+#    %>
+    <%#= link_to "#{ img }<br />#{ p.full_name }".html_safe, '#', :onClick => "changeVideo( '#{ p.netid }' );" %>
+  </p>
+
+<% #end -%>
+-->
+
+
+
+<!-- JavaScript -->
+<script src="/videos/ableplayer/build/ableplayer.js"></script>
+
+
