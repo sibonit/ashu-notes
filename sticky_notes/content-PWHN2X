@@ -126,6 +126,27 @@ cp -r app/controllers/* /rails/ashwini/app/controllers/
 cp -r app/controllers/about_controller /rails/dev.sib/app/controllers/
 cp -r app/views/ugrad /rails/dev.sib/app/views/
 
+---------------------------------------------------------------------------------
+Unix At Jobs:
+-----------------------
+Put all the commans you want to run in a file:
+-----------------------------------------------------------------------
+	> gvim /rails/micro_research_conf/local/close_registration.sh
+	> chmod 2770 close_registration.sh
+
+Activate the job (specify the time and date you want the job to run)
+---------------------------------------------------------------------------------------------------------------
+	> at -f /rails/micro_research_conf/local/close_registration.sh 12.00AM October 2 2015
+
+Job Status:
+-----------------
+	> atq
+
+Delete job (its: > atrm job_num)
+----------------------------------------------------
+	> atrm 2
+
+
 
 
 

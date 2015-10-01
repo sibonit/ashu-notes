@@ -1,0 +1,10 @@
+IRB COnsole:
+===========
+	> rails c p
+
+Using relational databases:
+--------------------------------------------
+Scenario: Find the departments for augspurger
+	> p=Person.find_by_last_name('augspurger')
+        > p.departments
+============================================

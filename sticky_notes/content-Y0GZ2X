@@ -1,5 +1,9 @@
 MYSQL Commands:
 ================
+Create new table:
+----------------------------
+mysql> create table users (id int(11) NOT NULL AUTO_INCREMENT, name varchar(255), PRIMARY KEY(id));
+
 Create a copy of a table:
 ------------------------------------------
 	CREATE TABLE news_items_mcb LIKE news_items;
