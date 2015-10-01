@@ -1,6 +1,5 @@
 MYSQL Commands:
 ================
-
 Create a copy of a table:
 ------------------------------------------
 	CREATE TABLE news_items_mcb LIKE news_items;
@@ -36,5 +35,25 @@ Enter password: Pi....le
 mysql> create database wp_blog_sib;
 mysql> grant all on wp_blog_sib.* to wp_blog_sib@localhost identified by "Co1WSVfkgH";
 
-
 update news_items set active = 1;
+
+
+Run query and export the result to .csv file
+====================================
+At Grappelli:
+
+> mysql -u root -p
+> Enter password: P…e
+> use pittendrigh_production;
+> show tables;
+The code below, runs the query and exports the results into a file in /tmp/chemical_inventories_list.csv:
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+mysql> select  distinct ic.chemicalidentification, ic.companyname, ic.contactnumber, ic.catalognumber,ic.numberofcontainers, ic.quantity, ic.location, icd.doc_file_name, concat('https://sib.illinois.edu/pittendrigh/internal/chemicalinventories_documents/',icd.id,'/download '), ic.datereceived,ic.purchasedfor, ic.chemicalhazard from internal_chemicalinventories ic inner join internal_chemicalinventories_documents icd on ic.id=icd.chemicalinventory_id order by ic.chemicalidentification INTO OUTFILE '/tmp/chemical_inventories_list.csv' FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n’;
+
+mysql> exit
+root@grappelli:/rails/pittendrigh# > ls -l /tmp
+
+At local: (copy file from server to local):
+--------------------------------------------------------------------
+> scp admin@grappelli.life.uiuc.edu:/tmp/chemical_inventories_list2.csv Documents/
+

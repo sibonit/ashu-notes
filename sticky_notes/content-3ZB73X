@@ -6,6 +6,8 @@ RAILS Rebuild Assets
 
 > RAILS_ENV=production bin/rake assets:precompile
 
+RAILS_ENV=development bin/rake assets:precompile
+
 http://guides.rubyonrails.org/asset_pipeline.html 
 
 
